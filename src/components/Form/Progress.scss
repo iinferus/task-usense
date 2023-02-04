@@ -1,0 +1,27 @@
+.progress {
+  @apply flex gap-2;
+}
+
+.progress__bar {
+  @apply w-full rounded-2xl bg-gray-400 h-1;
+
+  &--failed {
+    @apply bg-red-600;
+  }
+
+  &--easy {
+    &:nth-child(1) {
+      @apply bg-red-600;
+    }
+  }
+
+  &--medium {
+    &:nth-child(1), &:nth-child(2) {
+      @apply bg-yellow-400;
+    }
+  }
+
+  &--strong {
+    @apply bg-green-400;
+  }
+}

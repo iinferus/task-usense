@@ -1,0 +1,31 @@
+.form {
+  @apply flex flex-col w-full gap-5 w-2/4 ml-auto mr-auto;
+}
+
+.form__field {
+  @apply flex flex-col w-full gap-5;
+  &:focus,
+  &:focus-within,
+  &.focus {
+    .form__label {
+      transform: translate(0, 0);
+    }
+    &::before {
+      animation: none;
+      transition-duration: 0.7s;
+      width: 100%;
+    }
+  }
+}
+
+.form__label {
+  @apply text-lg text-gray-500;
+  transform: translate(16px, 36px);
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.form__input {
+  @apply border-b border-gray-400 text-lg text-gray-700 placeholder:opacity-0 px-4 py-2 outline-none;
+}
+
